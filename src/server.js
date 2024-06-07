@@ -1,14 +1,11 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
-
-const port = process.env.PORT
-const hostname = process.env.HOST_NAME
-
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+const viewEngine = require("./config/viewEngine")
+const webBrowse = require('./routes/web')
+webBrowse(app)
+viewEngine(app)
+const port = process.env.PORT || 8888
 
 
 app.listen(port, () => {
