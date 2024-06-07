@@ -4,7 +4,8 @@
   "description": "This is the Social Network App using modern web technologies to provide a seamless and interactive platform for users to connect, share, and engage with their community. Key features include real-time messaging, customizable profiles, interactive posts with multimedia support, and advanced privacy settings to ensure a safe and enjoyable user experience.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
