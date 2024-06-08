@@ -1,10 +1,10 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
     <style>
         *{
     margin: 0;padding: 0;
@@ -14,13 +14,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     height: 100vh;
     background: #f1f1f1;
     background: url('../images/banner.jpg') no-repeat center center fixed;
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-image: linear-gradient(120deg, #f196ec 0%, #80056f 100%);
     background-size: cover;
 }
 
@@ -76,31 +76,44 @@ input[type="submit"]:hover {
     </style>
 </head>
 <body>
-    <!-- <%=JSON.stringify(listAccount)%> -->
-    <div class="container" style="width: 500px;">
-        <h2>Login</h2>
-        <form action="" method="post">
-            <label for="username">Username</label>
-            <input  placeholder="Enter your username" type="text" value="" id="username" name="username">
-            <label for="password">Password</label>
-            <input  placeholder="Enter your password" type="password" value="" id="password" name="password">
+<div>
+    <nav>
+        <h4>Gureum</h4>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+        </ul>
+    </nav>
+</div>
+
+    <div class="container" ">
+        <h2>Register</h2>
+        <form action="/" method="get">
+           
+            <label>Username</label>
+            <input placeholder="Enter your username" type="text" name="username">
+           
+            <label>Email</label>
+            <input placeholder="Enter your email" type="text" name="email">
+
+            <label>Phone Number</label>
+            <input  placeholder="Enter your phone number" type="text" name="phoneNumber">
+
+            <label>Password</label>
+            <input placeholder="Enter your password"  type="password" name="password" >
             
-            <div style="text-align: center; 
-            background-color: #09bb4a;
-            border-radius: 5px;
-            border: 1px solid;
-            margin-top: 20px;
-            padding: 10px;
-            margin-bottom: 20px">
-            <a style="text-decoration: none; color: white;" href="/validationAccount">Enter</a>
-            </div>
+            <label>Confirm password</label>
+            <input placeholder="Enter your password"  type="password" name="confirmPassword">
+
+            <!-- <div style="text-align: center; margin: 20px 20px;"> -->
+            <button type="submit" class="btn btn-primary">Enter</button>
+            <!-- </div> -->
             <div style="text-align: center;">
-            <a class="btn btn-primary" style=" background: linear-gradient(to right, #2e8540, #4caf50);" href="/registrationPage" role="button">Create an Account</a>
-            <a href="">Forget password?</a>
-            </div>
+                <a class="btn btn-primary" style=" background: linear-gradient(to right, #2e8540, #4caf50);" href="/" role="button">Login an Account</a>
+                <a href="">Forget password?</a>
+                </div>
         </form>
     </div>
-
-   
 </body>
 </html>

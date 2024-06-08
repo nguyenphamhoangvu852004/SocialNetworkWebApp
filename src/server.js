@@ -1,13 +1,19 @@
-require('dotenv').config()
-const express = require('express')
-const app = express()
+const express = require("express")
+const app = express();
+
+const dotenv = require("dotenv");
+dotenv.config()
+const port = process.env.PORT
+const hostname = process.env.HOST_NAME
+
 const viewEngine = require("./config/viewEngine")
-const webBrowse = require('./routes/web')
-webBrowse(app)
 viewEngine(app)
-const port = process.env.PORT || 8888
 
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+const webBrowse = require("./routes/pages")
+app.get('/',webBrowse)
+app.get('/register',webBrowse)
+
+app.listen(port,hostname, () => {
+    console.log(`Example app listening on port: ${port}, hostname: ${hostname} `)
+  })
